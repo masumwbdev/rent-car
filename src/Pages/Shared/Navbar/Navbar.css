@@ -1,0 +1,15 @@
+.nav-container{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.nav-top-ancor{
+    color: black;
+    font-weight: bold;
+    font-size: 32px;
+}
+.nav-container a{
+    text-decoration: none;
+    margin-left: 22px;
+    color: black;
+    font-weight: 600;
+}
