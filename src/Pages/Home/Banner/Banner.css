@@ -29,6 +29,10 @@
     margin-top: 16px;
     margin-bottom: 22px;
 }
+/* .magda{
+  animation: backInRight; 
+  animation-duration: 2s;
+} */
 
 .hvr-sweep-to-right {
     display: inline-block;

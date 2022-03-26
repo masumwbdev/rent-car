@@ -7,16 +7,17 @@
     margin-top: 22px;
     width: 100%;
     border: 0;
-    box-shadow: 10px 10px 30px lightblue;
+    box-shadow: 5px 5px 30px rgb(203, 218, 223);
     padding: 11px 10px;
     border-radius: 6px;
     color: #FF6600;
     font-weight: 600;
 }
 .login-form{
-    box-shadow: 10px 10px 30px lightblue;
+    box-shadow: 5px 5px 30px rgb(177, 197, 204);
     padding: 23px 25px;
     border-radius: 10px;
+    /* border: 2px solid #FF6600; */
 }
 .submit-btn{
     background-color: #FF6600;

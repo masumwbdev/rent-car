@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import BottomFooter from '../../Shared/Footer/BottomFooter/BottomFooter';
 import TopFooter from '../../Shared/Footer/TopFooter/TopFooter';
@@ -8,6 +8,17 @@ import './Login.css'
 import google from '../../../images/google.png'
 
 const Login = () => {
+    const [loginData, setLoginData] = useState({})
+    const handleOnBlur = (e) => {
+        const field = e.target.name;
+        const value = e.target.value;
+        const newLoginData = {...loginData};
+        newLoginData[field] = value;
+        setLoginData(newLoginData);
+    }
+    const handleLoginSubmit = (e) => {
+        e.preventDefault()
+    }
     return (
         <div>
             <TopNav />
@@ -15,14 +26,13 @@ const Login = () => {
             <div className="width-control row login-page">
                 <div className="col-sm-12 col-md-4">
 
-                </div>
-                <div className="col-sm-12 col-md-4 login-form">
+                </div><div className="col-sm-12 col-md-4 login-form">
                     <h3>Log in or sign up in seconds</h3>
                     <small>Use your email or another service to continue with Rent Car (it's free)!</small>
-                    <form>
-                        <input required type="email" placeholder='Your email' />
+                    <form onSubmit={handleLoginSubmit}>
+                        <input required onBlur={handleOnBlur} name="email" type="email" placeholder='Your email' />
                         <br />
-                        <input required type="password" placeholder='Your password' />
+                        <input required onBlur={handleOnBlur} name="password" type="password" placeholder='Your password' />
                         <br />
                         <p className='mt-3'>New user? please <Link to="/register">Register</Link></p>
                         <input className='submit-btn mb-3' type="submit" value="Submit" />
