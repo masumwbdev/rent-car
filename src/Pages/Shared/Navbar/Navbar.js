@@ -28,26 +28,8 @@ const Navbar = () => {
                                         color: isActive ? "rgb(255, 102, 0)" : ""
                                     };
                                 }}
-                                    to="/car"
-                                >Rent car</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className='navbar-NavLink navbar-nav' style={({ isActive }) => {
-                                    return {
-                                        color: isActive ? "rgb(255, 102, 0)" : ""
-                                    };
-                                }}
-                                    to="/bike"
-                                >Rent bike</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className='navbar-NavLink navbar-nav' style={({ isActive }) => {
-                                    return {
-                                        color: isActive ? "rgb(255, 102, 0)" : ""
-                                    };
-                                }}
-                                    to="/scooty"
-                                >Rent scooty</NavLink>
+                                    to="/services"
+                                >Services</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink className='navbar-NavLink navbar-nav' style={({ isActive }) => {

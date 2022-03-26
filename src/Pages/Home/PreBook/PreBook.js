@@ -5,7 +5,7 @@ const PreBook = () => {
     return (
         <div className='mb-5'>
             <div className='width-control pre-book'>
-                <h1 className='text-center text-light pt-3 pb-3'>Pre Book</h1>
+                <h1 className='text-center text-light pt-3 pb-3'>Rent A Car Now!</h1>
                 <form className='row width-control'>
                     <input className='col-sm-6 col-md-4 col-lg-2' type="text" placeholder='model' />
                     <input className='col-sm-6 col-md-4 col-lg-2' type="text" placeholder='pick up location' />
