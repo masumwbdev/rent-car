@@ -1,0 +1,49 @@
+.login-page{
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+.login-page input{
+    margin-top: 22px;
+    width: 100%;
+    border: 0;
+    box-shadow: 10px 10px 30px lightblue;
+    padding: 11px 10px;
+    border-radius: 6px;
+    color: #FF6600;
+    font-weight: 600;
+}
+.login-form{
+    box-shadow: 10px 10px 30px lightblue;
+    padding: 23px 25px;
+    border-radius: 10px;
+}
+.submit-btn{
+    background-color: #FF6600;
+    color: white !important;
+    margin-top: 0 !important;
+}
+.login-page small{
+    font-weight: 600;
+}
+.login-page p{
+    font-weight: 600;
+    border: 0;
+}
+.login-page .google-login{
+    width: 100%;
+    border: 2px solid #FF6600;
+    box-shadow: 10px 10px 30px lightblue;
+    padding: 6px 8px;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+.login-page .google-icon{
+    text-align: left;
+    width: 35px;
+}
+.google-content{
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 600;
+}

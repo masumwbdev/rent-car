@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css'
 
 const Navbar = () => {
@@ -41,7 +41,7 @@ const Navbar = () => {
                                 >Contact us</NavLink>
                             </li>
                         </ul>
-                        <button className="nav-login-btn hvr-sweep-to-bottom hvr-ripple-out">Login</button>
+                        <Link to="/login"><button className="nav-login-btn hvr-sweep-to-bottom hvr-ripple-out">Login</button></Link>
                     </div>
                 </div>
             </nav>
