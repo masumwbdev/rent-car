@@ -6,9 +6,12 @@ import Navbar from '../../Shared/Navbar/Navbar';
 import TopNav from '../../Shared/TopNav/TopNav';
 import './Login.css'
 import google from '../../../images/google.png'
+import useFirebase from '../../../Hooks/useFirebase'
 
 const Login = () => {
-    const [loginData, setLoginData] = useState({})
+    const [loginData, setLoginData] = useState({});
+    const {user, loginInUsingGoogle} = useFirebase();
+    console.log(user)
     const handleOnBlur = (e) => {
         const field = e.target.name;
         const value = e.target.value;
@@ -37,7 +40,7 @@ const Login = () => {
                         <p className='mt-3'>New user? please <Link to="/register">Register</Link></p>
                         <input className='submit-btn mb-3' type="submit" value="Submit" />
                     </form>
-                    <button className='hvr-sweep-to-bottom hvr-ripple-out google-login d-flex align-items-center'> <span><img className='google-icon fs-6' src={google} alt="" /></span> <span className='google-content text-center'>Continue With Google</span></button>
+                    <button onClick={loginInUsingGoogle} className='hvr-sweep-to-bottom hvr-ripple-out google-login d-flex align-items-center'> <span><img className='google-icon fs-6' src={google} alt="" /></span> <span className='google-content text-center'>Continue With Google</span></button>
                     <br />
                     <small>By continuing, you agree to Rent car Terms of Use(opens in a new tab or window). Read our Privacy Policy(opens in a new tab or window).</small>
                 </div>

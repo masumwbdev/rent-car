@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import useFirebase from '../../../Hooks/useFirebase';
 import './Navbar.css'
 
 const Navbar = () => {
+    const {user, logOut} = useFirebase();
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light nav-color">
@@ -41,7 +43,10 @@ const Navbar = () => {
                                 >Contact us</NavLink>
                             </li>
                         </ul>
+                        {user?.email ?<button onClick={logOut} className="nav-login-btn hvr-sweep-to-bottom hvr-ripple-out">Logout</button>
+                        :
                         <Link to="/login"><button className="nav-login-btn hvr-sweep-to-bottom hvr-ripple-out">Login</button></Link>
+                        }
                     </div>
                 </div>
             </nav>
