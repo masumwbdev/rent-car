@@ -1,3 +1,8 @@
+.top-nav-color{
+    background-color: rgb(255, 102, 0);
+    padding: 4px 0;
+    color: white;
+}
 .width-control{
     width: 94%;
     margin: auto;
@@ -5,7 +10,11 @@
 .top-nav-icons i{
     margin-left: 22px;
 }
+.top-nav-icons:hover{
+    cursor: pointer;
+}
 .top-nav-contact span{
     margin-right: 22px;
     margin-left: 8px;
+    font-weight: 600;
 }
