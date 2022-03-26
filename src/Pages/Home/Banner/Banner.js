@@ -16,7 +16,7 @@ const Banner = () => {
                 <div className="col-sm-12 col-md-6 text-center magda-touring">
                     <h1 className='magda'>Magda Touring</h1>
                     <h2>32$/Day</h2>
-                    <button className="hvr-bounce-to-right">Book Now</button>
+                    <button className="hvr-sweep-to-right hvr-ripple-out">Book Now</button>
                 </div>
             </div>
         </div>

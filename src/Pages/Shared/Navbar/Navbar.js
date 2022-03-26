@@ -59,7 +59,7 @@ const Navbar = () => {
                                 >Contact us</NavLink>
                             </li>
                         </ul>
-                        <button className="nav-login-btn hvr-sweep-to-bottom">Login</button>
+                        <button className="nav-login-btn hvr-sweep-to-bottom hvr-ripple-out">Login</button>
                     </div>
                 </div>
             </nav>
