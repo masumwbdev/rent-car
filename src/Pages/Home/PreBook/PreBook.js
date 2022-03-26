@@ -3,7 +3,7 @@ import './PreBook.css'
 
 const PreBook = () => {
     return (
-        <div className='mb-5'>
+        <div className='mb-5 pre-container'>
             <div className='width-control pre-book'>
                 <h1 className='text-center text-light pt-3 pb-3'>Rent A Car Now!</h1>
                 <form className='row width-control'>
