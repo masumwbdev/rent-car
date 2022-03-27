@@ -2,4 +2,41 @@
     background-color: #1f1f1f;
     color: white;
     margin-top: 55px;
+    padding-top: 33px;
+    padding-bottom: 34px;
+}
+.top-address{
+    background-color: #1A1A1A;
+    color: rgb(255, 255, 255);
+    padding: 16px 0;
+    margin-bottom: 42px;
+}
+.top-address i{
+    font-size: 33px;
+    margin-right: 18px;
+}
+.top-address .contact-way{
+    font-size: 22px;
+    font-weight: 600;
+}
+.top-address span{
+    font-weight: 600;
+}
+.top-footer a{
+    text-decoration: none;
+    color: white;
+}
+.footer-all-icons{
+    font-size: 22px;
+    /* color: rgb(255, 102, 0); */
+}
+.footer-all-icons i:hover{
+    color: rgb(255, 102, 0);
+    cursor: pointer;
+}
+.footer-site-name{
+    color: rgb(255, 102, 0);
+}
+.top-footer h4{
+    color: rgb(255, 102, 0);
 }

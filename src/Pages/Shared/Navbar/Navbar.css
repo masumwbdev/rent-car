@@ -34,6 +34,9 @@
     background-color: #1F1F1F;
     color: white;
 }
+.display-name{
+  color: rgba(152, 151, 156, 0.986);
+}
 .hvr-sweep-to-bottom {
     display: inline-block;
     vertical-align: middle;

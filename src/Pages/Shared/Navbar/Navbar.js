@@ -42,6 +42,9 @@ const Navbar = () => {
                                     to="/contact"
                                 >Contact us</NavLink>
                             </li>
+                            <li className='ms-4 display-name'>
+                                {user?.displayName}
+                            </li>
                         </ul>
                         {user?.email ?<button onClick={logOut} className="nav-login-btn hvr-sweep-to-bottom hvr-ripple-out">Logout</button>
                         :
