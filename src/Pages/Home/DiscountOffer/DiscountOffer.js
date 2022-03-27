@@ -7,10 +7,10 @@ import './DiscountOffer.css'
 const DiscountOffer = () => {
     return (
         <div className='discount-container'>
-            <h1 className='text-center animate__fadeInUp animate__animated'>Discount offers!</h1>
+            <h1 data-aos="zoom-in" className='text-center'>Discount offers!</h1>
             <div class="row row-cols-1 row-cols-md-3 width-control g-4">
                 <div class="col">
-                    <div class="card h-100 discount">
+                    <div data-aos="zoom-in-up" data-aos-duration="2000" class="card h-100 discount">
                         <h5 className='mt-3'>Budget</h5>
                         <div className="text-center">
                             <img src={disThree} alt="" />
@@ -28,7 +28,7 @@ const DiscountOffer = () => {
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100 discount">
+                    <div data-aos="zoom-in-up" data-aos-duration="2000" class="card h-100 discount">
                     <h5 className='mt-3'>Business</h5>
                         <div className="text-center">
                             <img src={disTwo} alt="" />
@@ -46,7 +46,7 @@ const DiscountOffer = () => {
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100 discount discount-last">
+                    <div data-aos="zoom-in-up" data-aos-duration="2000" class="card h-100 discount discount-last">
                     <h5 className='mt-3'>Enterprice</h5>
                         <div className="text-center">
                             <img className='w-75' src={disOne} alt="" />

@@ -10,12 +10,12 @@ import useFirebase from '../../../Hooks/useFirebase'
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
-    const {user, loginInUsingGoogle} = useFirebase();
+    const { user, loginInUsingGoogle } = useFirebase();
     console.log(user)
     const handleOnBlur = (e) => {
         const field = e.target.name;
         const value = e.target.value;
-        const newLoginData = {...loginData};
+        const newLoginData = { ...loginData };
         newLoginData[field] = value;
         setLoginData(newLoginData);
     }
@@ -29,7 +29,9 @@ const Login = () => {
             <div className="width-control row login-page">
                 <div className="col-sm-12 col-md-4">
 
-                </div><div className="col-sm-12 col-md-4 login-form">
+                </div>
+                <div data-aos="fade-up"
+     data-aos-duration="2000" className="col-sm-12 col-md-4 login-form">
                     <h3>Log in or sign up in seconds</h3>
                     <small>Use your email or another service to continue with Rent Car (it's free)!</small>
                     <form onSubmit={handleLoginSubmit}>

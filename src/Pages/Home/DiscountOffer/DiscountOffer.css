@@ -23,7 +23,6 @@
     cursor: pointer;
     background-color: #FF6600;
     color: white;
-    transition: .4s;
 }
 .discount button{
     border: 0;

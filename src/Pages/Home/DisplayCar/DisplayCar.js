@@ -9,12 +9,14 @@ const DisplayCar = () => {
         <div className='display-car'>
             <div className="width-control row">
                 <div className="col-sm-12 col-md-6 col-lg-4">
-                    <div className="picup">
+                    <div data-aos="fade-up" data-aos-duration="1500"
+                        data-aos-anchor-placement="top-bottom" className="picup">
                         <i class="fas fa-truck-pickup"></i>
                         <h5>Pickup & delivery</h5>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore quae voluptatum soluta!</p>
                     </div>
-                    <div className="picup">
+                    <div data-aos="fade-up" data-aos-duration="2000"
+                        data-aos-anchor-placement="top-bottom" className="picup">
                         <i class="fas fa-gas-pump"></i>
                         <h5>Fuel plans</h5>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore quae voluptatum soluta!</p>
@@ -22,7 +24,7 @@ const DisplayCar = () => {
                 </div>
                 <div className="col-sm-12 col-md-6 col-lg-4">
                     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                        <div class="carousel-inner">
+                        <div data-aos="zoom-out" data-aos-duration="2000" class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src={one} class="d-block w-100" alt="..." />
                             </div>
@@ -36,12 +38,14 @@ const DisplayCar = () => {
                     </div>
                 </div>
                 <div className="col-sm-12 col-md-6 col-lg-4">
-                    <div className="left-disp">
+                    <div data-aos="fade-up" data-aos-duration="1500"
+                        data-aos-anchor-placement="top-bottom" className="left-disp">
                         <i class="fas fa-user-injured"></i>
                         <h5>Personal Driver</h5>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore quae voluptatum soluta!</p>
                     </div>
-                    <div className="left-disp">
+                    <div data-aos="fade-up" data-aos-duration="2000"
+                        data-aos-anchor-placement="top-bottom" className="left-disp">
                         <i class="far fa-compass"></i>
                         <h5>Car Navigation</h5>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore quae voluptatum soluta!</p>
