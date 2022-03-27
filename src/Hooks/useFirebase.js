@@ -9,7 +9,7 @@ const useFirebase = () => {
     const auth = getAuth();
 
     // signup
-    const registerAuth = (email, password, name) => {
+    const registerAuth = (email, password, name, navigate) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
@@ -21,6 +21,7 @@ const useFirebase = () => {
                 }).then(() => {
                 }).catch((error) => {
                 });
+                navigate('/')
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -30,9 +31,11 @@ const useFirebase = () => {
     }
 
     // signin
-    const loginAuth = (email, password) => {
+    const loginAuth = (email, password, location, navigate) => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
+                const destination = location?.state?.from || '/'
+                navigate(destination)
                 // Signed in 
                 const user = userCredential.user;
                 setError('')
@@ -44,13 +47,15 @@ const useFirebase = () => {
     }
 
     // login with google
-    const loginInUsingGoogle = () => {
+    const loginInUsingGoogle = (location, navigate) => {
         const googleProvider = new GoogleAuthProvider();
         signInWithPopup(auth, googleProvider)
             .then((result) => {
                 const credential = GoogleAuthProvider.credentialFromResult(result);
                 const token = credential.accessToken;
                 const user = result.user;
+                const destination = location?.state?.from || '/'
+                navigate(destination);
             }).catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;

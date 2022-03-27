@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import BottomFooter from '../../Shared/Footer/BottomFooter/BottomFooter';
 import TopFooter from '../../Shared/Footer/TopFooter/TopFooter';
 import Navbar from '../../Shared/Navbar/Navbar';
@@ -11,6 +11,8 @@ import useAuth from '../../../Hooks/useAuth';
 const Login = () => {
     const [loginData, setLoginData] = useState({});
     const { user, loginInUsingGoogle, error, loginAuth } = useAuth();
+    const location = useLocation();
+    const navigate = useNavigate();
     console.log(user)
     const handleOnBlur = (e) => {
         const field = e.target.name;
@@ -20,7 +22,7 @@ const Login = () => {
         setLoginData(newLoginData);
     }
     const handleLoginSubmit = (e) => {
-        loginAuth(loginData.email, loginData.password)
+        loginAuth(loginData.email, loginData.password, location, navigate)
         e.preventDefault()
     }
     return (

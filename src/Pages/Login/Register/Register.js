@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import BottomFooter from '../../Shared/Footer/BottomFooter/BottomFooter';
 import TopFooter from '../../Shared/Footer/TopFooter/TopFooter';
@@ -9,6 +9,7 @@ import TopNav from '../../Shared/TopNav/TopNav';
 const Register = () => {
     const [regData, setRegData] = useState({});
     const { registerAuth, error } = useAuth();
+    const navigate = useNavigate();
     const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -18,7 +19,7 @@ const Register = () => {
         console.log(newRegData);
     }
     const handleRegSubmit = e => {
-        registerAuth(regData.email, regData.password, regData.name)
+        registerAuth(regData.email, regData.password, regData.name, navigate)
         e.preventDefault();
     }
     return (
