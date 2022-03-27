@@ -8,6 +8,7 @@ import BanSvg from '../BanSvg/BanSvg';
 import DiscountOffer from '../DiscountOffer/DiscountOffer';
 import DisplayCar from '../DisplayCar/DisplayCar';
 import PreBook from '../PreBook/PreBook';
+import ScrollSection from '../ScrollSection/ScrollSection';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <BanSvg />
             <PreBook />
             <DisplayCar />
+            <ScrollSection />
             <DiscountOffer />
             <TopFooter />
             <BottomFooter />
