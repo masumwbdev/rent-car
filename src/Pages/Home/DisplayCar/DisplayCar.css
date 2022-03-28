@@ -6,3 +6,11 @@
     color: rgb(255, 102, 0);
     margin-bottom: 12px;
 }
+.picup, .left-disp{
+    padding: 11px;
+}
+.picup:hover, .left-disp:hover{
+    box-shadow: 5px 5px 30px lightblue;
+    border-radius: 10px;
+    cursor: default;
+}

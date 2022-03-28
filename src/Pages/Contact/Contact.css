@@ -1,0 +1,65 @@
+.contact-container{
+    background-image: url('../../images/contact-img.jpg');
+    background-size: cover;
+    padding: 44px 0;
+}
+.contact-form, .contact-addr{
+    padding: 33px;
+}
+.contact-addr i{
+    font-size: 26px;
+    color: rgb(255, 102, 0);
+}
+.contact-addr span{
+    font-size: 22px;
+    margin-left: 16px;
+}
+.contact-form input, .contact-form textarea{
+    width: 90%;
+    margin-top: 18px;
+    padding: 12px 16px;
+    border: 0;
+    box-shadow: 5px 5px 30px rgb(204, 206, 207);
+    border-radius: 6px;
+    font-weight: 600;
+    color: rgb(255, 102, 0);
+}
+.contact-submit-btn{
+    border: 0;
+    background-color: rgb(255, 102, 0);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 12px;
+    padding: 11px 43px;
+    border-radius: 4px;
+}
+@-webkit-keyframes hvr-pop {
+    50% {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  }
+  @keyframes hvr-pop {
+    50% {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  }
+  .hvr-pop {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .hvr-pop:hover, .hvr-pop:focus, .hvr-pop:active {
+    -webkit-animation-name: hvr-pop;
+    animation-name: hvr-pop;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }

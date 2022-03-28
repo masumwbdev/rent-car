@@ -1,6 +1,7 @@
 import React from 'react';
 import './Banner.css';
 import imgOne from '../../../images/banner/car3.png';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -19,7 +20,7 @@ const Banner = () => {
                 <div data-aos="fade-up" data-aos-duration="2000" className="col-sm-12 col-md-6 text-center magda-touring">
                     <h1 className='magda"'>Magda Touring</h1>
                     <h2>32$/Day</h2>
-                    <button className="hvr-sweep-to-right hvr-ripple-out">Book Now</button>
+                    <Link to="/services"><button className="hvr-sweep-to-right hvr-ripple-out">Book Now</button></Link>
                 </div>
             </div>
         </div>
