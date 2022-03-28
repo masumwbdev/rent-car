@@ -20,7 +20,7 @@ function App() {
           <Route path='login' element={<Login />} />
           <Route path='register' element={<Register />} />
           <Route path='contact' element={<Contact />} />
-          <Route path='booking/:bookingId' element={<Booking />} />
+          <Route path='/booking/:bookingId' element={<Booking />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </AuthProvider>

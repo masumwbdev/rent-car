@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './HomeService.css'
 
 const HomeService = ({ homeService }) => {
-    const { id, carName, imgURL, cost, regularCost, oil, transmission, passengers } = homeService;
+    const { _id, carName, imgURL, cost, regularCost, oil, transmission, passengers } = homeService;
     return (
         <div class="col-sm-12 col-md-6 col-lg-3 home-service">
             <div class="card h-100 border-0 p-2 hvr-underline-from-left">
@@ -16,7 +16,7 @@ const HomeService = ({ homeService }) => {
                             <span>{cost}$</span>
                         </div>
                         <div>
-                            <Link to={`/booking/${id}`}><button className='hvr-sweep-to-right hvr-ripple-out'>
+                            <Link to={`/booking/${_id}`}><button className='hvr-sweep-to-right hvr-ripple-out'>
                                 Book now
                             </button></Link>
                         </div>
