@@ -7,8 +7,10 @@ import Banner from '../Banner/Banner';
 import BanSvg from '../BanSvg/BanSvg';
 import DiscountOffer from '../DiscountOffer/DiscountOffer';
 import DisplayCar from '../DisplayCar/DisplayCar';
+import HomeServices from '../HomeServices/HomeServices';
 import PreBook from '../PreBook/PreBook';
 import ScrollSection from '../ScrollSection/ScrollSection';
+import SwiperCarousel from '../SwiperCarousel/SwiperCarousel';
 
 const Home = () => {
     return (
@@ -19,6 +21,8 @@ const Home = () => {
             <BanSvg />
             <PreBook />
             <DisplayCar />
+            <HomeServices />
+            <SwiperCarousel />
             <ScrollSection />
             <DiscountOffer />
             <TopFooter />

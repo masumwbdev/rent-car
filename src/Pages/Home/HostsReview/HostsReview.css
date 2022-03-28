@@ -1,0 +1,9 @@
+.host-container{
+    margin-top: 84px;
+    margin-bottom: 84px;
+
+}
+.host-review-card{
+    box-shadow: 5px 5px 30px rgb(234, 236, 236);
+    margin: 0px 8px;
+}
