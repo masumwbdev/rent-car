@@ -33,6 +33,15 @@ const Navbar = () => {
                                     to="/services"
                                 >Services</NavLink>
                             </li>
+                            {user?.email && <li className="nav-item">
+                                <NavLink className='navbar-NavLink navbar-nav' style={({ isActive }) => {
+                                    return {
+                                        color: isActive ? "rgb(255, 102, 0)" : ""
+                                    };
+                                }}
+                                    to="/dashboard/dashboardHome"
+                                >Dashboard</NavLink>
+                            </li>}
                             <li className="nav-item">
                                 <NavLink className='navbar-NavLink navbar-nav' style={({ isActive }) => {
                                     return {

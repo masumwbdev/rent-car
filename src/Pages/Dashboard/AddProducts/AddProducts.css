@@ -1,0 +1,18 @@
+.add-products-form input, .add-products-form textarea, .add-products-form select{
+    border: 2px solid #3749BB;
+    padding: 4px 8px;
+    margin-top: 12px;
+    color: #3749BB;
+    width: 50%;
+    margin-left: 12px;
+    font-weight: 500;
+    border-radius: 2px;
+}
+/* .add-products-form select{
+    width: 50%;
+} */
+
+.add-products-form input[type=submit]{
+    background-color: #3749BB;
+    color: white;
+}
