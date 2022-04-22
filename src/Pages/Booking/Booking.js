@@ -38,7 +38,7 @@ const Booking = () => {
                 <div className="row">
                     <div className="col-sm-12 col-md-6 service-list-item">
                     <h4 className='mt-5 mb-4'>Service overview</h4>
-                        <img src={booking.imgURL} alt="" />
+                        <img className='img-fluid' src={booking.imgURL} alt="" />
                         <h5 className='mt-4'>{booking.carName}</h5>
                         <ul>
                             <li>

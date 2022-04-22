@@ -1,53 +1,64 @@
-.discount-container{
+.discount-container {
     margin-top: 111px;
 }
-.discount-container .discount{
+
+.discount-container .discount {
     text-align: center;
 }
-.discount{
+
+.discount {
     font-weight: 600;
     border-radius: 10px;
     border: 0;
-    box-shadow: 1px 5px 56px -46px rgba(0,0,0,0.57);
--webkit-box-shadow: 1px 5px 56px -46px rgba(0,0,0,0.57);
--moz-box-shadow: 1px 5px 56px -46px rgba(0,0,0,0.57);
-    }
-.discount del{
+    box-shadow: 1px 5px 56px -46px rgba(0, 0, 0, 0.57);
+    -webkit-box-shadow: 1px 5px 56px -46px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 1px 5px 56px -46px rgba(0, 0, 0, 0.57);
+    padding: 12px 0;
+}
+
+.discount del {
     color: #FF6600;
     font-weight: 600;
     font-size: 20px;
 }
-.discount:hover{
+
+.discount:hover {
     background-color: #fff;
     box-shadow: 10px 10px 30px rgb(233, 237, 238);
     cursor: pointer;
     background-color: #FF6600;
     color: white;
 }
-.discount button{
+
+.discount button {
     border: 0;
     background-color: #ff660000;
     font-weight: 600;
     font-size: 20px;
 }
-.discount:hover button{
+
+.discount:hover button {
     color: white;
 }
-.discount:hover del{
+
+.discount:hover del {
     color: rgb(238, 208, 208);
 }
-.discount-last{
+
+.discount-last {
     background-color: #FF6600;
     color: white;
     border-radius: 10px;
 }
-.discount-last button{
+
+.discount-last button {
     background-color: #ff660000;
     border: 0;
     color: white;
     font-weight: 600;
     font-size: 20px;
 }
-.discount-last del{
+
+.discount-last del {
     color: rgb(238, 208, 208);
 }

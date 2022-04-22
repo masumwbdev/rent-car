@@ -11,15 +11,19 @@ const HomeServices = () => {
     }, [])
 
     return (
+
         <div className="home-services-container">
-            <div class="row mt-5 mb-5 width-control g-3">
-                {
-                    homeServices.map(homeService => <HomeService
-                        homeService={homeService}
-                    >
-                    </HomeService>)
-                }
-            </div>
+            {homeServices.length === 0 ?
+                <div class="lds-hourglass mx-auto"></div>
+                :
+                <div class="row mt-5 mb-5 width-control g-3">
+                    {
+                        homeServices.map(homeService => <HomeService
+                            homeService={homeService}
+                        >
+                        </HomeService>)
+                    }
+                </div>}
         </div>
     );
 };

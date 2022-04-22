@@ -2,6 +2,7 @@ import React from 'react';
 import disOne from '../../../images/discar/disone.png'
 import disTwo from '../../../images/discar/distwo.png'
 import disThree from '../../../images/discar/disthree.png'
+import {Link} from 'react-router-dom';
 import './DiscountOffer.css'
 
 const DiscountOffer = () => {
@@ -24,7 +25,7 @@ const DiscountOffer = () => {
                         <p><i class="fa-solid fa-check"></i> Breakdown assistance</p>
                         <p><i class="fa-solid fa-check"></i> Full insurance</p>
                         <hr />
-                        <button>Get Started</button>
+                        <Link to="/services"><button>Get Started</button></Link>
                     </div>
                 </div>
                 <div class="col">
@@ -42,7 +43,7 @@ const DiscountOffer = () => {
                         <p><i class="fa-solid fa-check"></i> Breakdown assistance</p>
                         <p><i class="fa-solid fa-check"></i> Full insurance</p>
                         <hr />
-                        <button>Get Started</button>
+                        <Link to="/services"><button>Get Started</button></Link>
                     </div>
                 </div>
                 <div class="col">
@@ -60,7 +61,7 @@ const DiscountOffer = () => {
                         <p><i class="fa-solid fa-check"></i> Breakdown assistance</p>
                         <p><i class="fa-solid fa-check"></i> Full insurance</p>
                         <hr />
-                        <button className='mb-4'>Get Started</button>
+                        <Link to="/services"><button>Get Started</button></Link>
                     </div>
                 </div>
             </div>
