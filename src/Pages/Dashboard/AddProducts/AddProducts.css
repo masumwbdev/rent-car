@@ -8,10 +8,6 @@
     font-weight: 500;
     border-radius: 2px;
 }
-/* .add-products-form select{
-    width: 50%;
-} */
-
 .add-products-form input[type=submit]{
     background-color: #3749BB;
     color: white;

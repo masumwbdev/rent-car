@@ -9,6 +9,7 @@ import DiscountOffer from '../DiscountOffer/DiscountOffer';
 import DisplayCar from '../DisplayCar/DisplayCar';
 import HomeServices from '../HomeServices/HomeServices';
 import PreBook from '../PreBook/PreBook';
+import Reviews from '../Reviews/Reviews';
 import ScrollSection from '../ScrollSection/ScrollSection';
 import SwiperCarousel from '../SwiperCarousel/SwiperCarousel';
 
@@ -25,6 +26,7 @@ const Home = () => {
             <SwiperCarousel />
             <ScrollSection />
             <DiscountOffer />
+            <Reviews />
             <TopFooter />
             <BottomFooter />
         </div>

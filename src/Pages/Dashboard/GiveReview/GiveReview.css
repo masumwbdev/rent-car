@@ -1,0 +1,17 @@
+.review-form-container{
+    margin: 0 auto;
+    width: 300px;
+}
+.review-form-container input, .review-form-container textarea{
+    width: 100%;
+    color: #3749BB;
+    border: 2px solid #3749BB;
+    margin-top: 12px;
+    border-radius: 2px;
+    padding: 6px 12px;
+    font-weight: 600;
+}
+.review-form-container input[type=submit]{
+    background-color: #3749BB;
+    color: white;
+}

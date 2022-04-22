@@ -22,7 +22,7 @@ const Booking = () => {
     }, [])
 
     const onSubmit = data => {
-        axios.post('http://localhost:5000/users', data)
+        axios.post('http://localhost:5000/bookings', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('booking added successfully');
