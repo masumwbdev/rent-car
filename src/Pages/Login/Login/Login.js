@@ -10,7 +10,8 @@ import useAuth from '../../../Hooks/useAuth';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
-    const { user, loginInUsingGoogle, error, loginAuth } = useAuth();
+    const { user, loginUsingGoogle, error, loginAuth } = useAuth();
+    console.log(user.email);
     const location = useLocation();
     const navigate = useNavigate();
     console.log(user)
@@ -24,6 +25,9 @@ const Login = () => {
     const handleLoginSubmit = (e) => {
         loginAuth(loginData.email, loginData.password, location, navigate)
         e.preventDefault()
+    }
+    const handleGoogleAuth = () => {
+        loginUsingGoogle(location, navigate);
     }
     return (
         <div>
@@ -45,7 +49,7 @@ const Login = () => {
                         <p className='mt-3'>New user? please <Link to="/register">Register</Link></p>
                         <input className='submit-btn mb-3' type="submit" value="Submit" />
                     </form>
-                    <button onClick={loginInUsingGoogle} className='hvr-sweep-to-bottom hvr-ripple-out google-login d-flex align-items-center'> <span><img className='google-icon fs-6' src={google} alt="" /></span> <span className='google-content text-center'>Continue With Google</span></button>
+                    <button onClick={handleGoogleAuth} className='hvr-sweep-to-bottom hvr-ripple-out google-login d-flex align-items-center'> <span><img className='google-icon fs-6' src={google} alt="" /></span> <span className='google-content text-center'>Continue With Google</span></button>
                     {error && <p>{error}</p>}
                     <br />
                     <small>By continuing, you agree to Rent car Terms of Use(opens in a new tab or window). Read our Privacy Policy(opens in a new tab or window).</small>

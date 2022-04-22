@@ -33,7 +33,7 @@ const Navbar = () => {
                                     to="/services"
                                 >Services</NavLink>
                             </li>
-                            {user?.email && <li className="nav-item">
+                            {user?.displayName && <li className="nav-item">
                                 <NavLink className='navbar-NavLink navbar-nav' style={({ isActive }) => {
                                     return {
                                         color: isActive ? "rgb(255, 102, 0)" : ""
@@ -55,7 +55,7 @@ const Navbar = () => {
                                 {user?.displayName}
                             </li>
                         </ul>
-                        {user?.email ?<button onClick={logOut} className="nav-login-btn hvr-sweep-to-bottom hvr-ripple-out">Logout</button>
+                        {user?.displayName ?<button onClick={logOut} className="nav-login-btn hvr-sweep-to-bottom hvr-ripple-out">Logout</button>
                         :
                         <Link to="/login"><button className="nav-login-btn hvr-sweep-to-bottom hvr-ripple-out">Login</button></Link>
                         }

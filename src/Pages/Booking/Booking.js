@@ -71,9 +71,10 @@ const Booking = () => {
                         <form className="mb-5 booking-form" onSubmit={handleSubmit(onSubmit)}>
 
                             <input className='input-name' {...register("name", { required: true, maxLength: 1000 })} defaultValue={user?.displayName} /> <br />
-                            <input className='input-email' {...register("email", { required: true, maxLength: 1000 })} defaultValue={user?.email} /> <br />
+                            <input className='input-email' {...register("email", { required: true, maxLength: 1000 })} defaultValue={user?.email} placeholder="Your Email" /> <br />
                             <input {...register("title", { required: true, maxLength: 1000 })} defaultValue={booking.carName} /> <br />
-                            <input {...register("img", { required: true, maxLength: 1000 })} defaultValue={booking.imgURL} /> <br />
+                            <input className='img-url' {...register("img", { required: true, maxLength: 1000 })} defaultValue={booking.imgURL} /> <br />
+                            <input className='regular-cost' {...register("regularCost", { required: true, maxLength: 1000 })} defaultValue={booking.regularCost} /> <br />
                             <input {...register("number", { required: true, maxLength: 1000 })} placeholder='Contact number *' /> <br />
                             <input {...register("location", { required: true, maxLength: 100 })} placeholder="City name *" /> <br />
                             <input className="submit" type="submit" value="Book confirm" />
