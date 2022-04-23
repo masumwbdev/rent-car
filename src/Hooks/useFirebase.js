@@ -1,5 +1,5 @@
 import initializeAuthentication from "../Pages/Login/Firebase/firebase.init"
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged,signInWithEmailAndPassword, signOut, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signOut, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
 
 initializeAuthentication();
@@ -17,8 +17,8 @@ const useFirebase = () => {
                 setError('')
                 const newUser = { email, displayName: name }
                 setUser(newUser);
-                // save user to the database
-                saveUser(email, name);
+                // save user to the database > for email pass auth
+                saveUser(email, name, 'POST');
                 updateProfile(auth.currentUser, {
                     displayName: name
                 }).then(() => {
@@ -51,12 +51,12 @@ const useFirebase = () => {
 
     // login with google
     const loginUsingGoogle = (location, navigate) => {
-        
+
         signInWithPopup(auth, googleProvider)
             .then((result) => {
-                const credential = GoogleAuthProvider.credentialFromResult(result);
-                const token = credential.accessToken;
                 const user = result.user;
+                // save user to the db > for google auth
+                saveUser(user.email, user.displayName, 'PUT')
                 const destination = location?.state?.from || '/';
                 navigate(destination);
             }).catch((error) => {
@@ -81,16 +81,16 @@ const useFirebase = () => {
     }, [])
 
     // save user
-    const saveUser = (email, displayName) => {
-        const user = {email, displayName};
+    const saveUser = (email, displayName, method) => {
+        const user = { email, displayName };
         fetch('http://localhost:5000/users', {
-            method: 'POST',
+            method: method,
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(user)
         })
-        .then()
+            .then()
     }
 
     // logout
