@@ -1,8 +1,10 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
+import useAuth from '../../../Hooks/useAuth';
 import './Dashboard.css'
 
 const Dashboard = () => {
+    const {admin} = useAuth();
     return (
         <div className="dashboard-container">
             <div className="">
@@ -39,7 +41,7 @@ const Dashboard = () => {
                                             >My orders</NavLink>
                                         </li>
                                     </div>
-                                    <div className="nasted-li">
+                                    {admin && <div className="nasted-li">
                                         <li class="nav-item">
                                             <NavLink className='hvr-underline-from-center navbar-NavLink nasted-nav' style={({ isActive }) => {
                                                 return {
@@ -50,8 +52,8 @@ const Dashboard = () => {
                                                 to="/dashboard/makeAdmin"
                                             >Make admin</NavLink>
                                         </li>
-                                    </div>
-                                    <div className="nasted-li">
+                                    </div>}
+                                    {admin && <div className="nasted-li">
                                         <li class="nav-item">
                                             <NavLink className='hvr-underline-from-center navbar-NavLink nasted-nav' style={({ isActive }) => {
                                                 return {
@@ -62,7 +64,7 @@ const Dashboard = () => {
                                                 to="/dashboard/addProducts"
                                             >Add products</NavLink>
                                         </li>
-                                    </div>
+                                    </div>}
                                     <div className="nasted-li">
                                         <li class="nav-item">
                                             <NavLink className='hvr-underline-from-center navbar-NavLink nasted-nav' style={({ isActive }) => {

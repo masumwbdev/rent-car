@@ -5,7 +5,10 @@ import { useEffect, useState } from "react";
 initializeAuthentication();
 const useFirebase = () => {
     const [user, setUser] = useState({});
+    // for handle error
     const [error, setError] = useState('');
+    // for making admin
+    const [admin, setAdmin] = useState(false);
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
@@ -93,6 +96,13 @@ const useFirebase = () => {
             .then()
     }
 
+    // make admin ui
+    useEffect( () => {
+        fetch(`http://localhost:5000/users/${user.email}`)
+        .then(res => res.json())
+        .then(data => setAdmin(data.admin))
+    }, [user.email])
+
     // logout
     const logOut = () => {
         signOut(auth).then(() => {
@@ -103,6 +113,7 @@ const useFirebase = () => {
     return {
         loginUsingGoogle,
         user,
+        admin,
         loginAuth,
         error,
         registerAuth,
