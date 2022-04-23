@@ -11,6 +11,7 @@ import MakeAdmin from './Pages/Dashboard/MakeAdmin/MakeAdmin';
 import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
 import Home from './Pages/Home/Home/Home';
 import Services from './Pages/Home/Services/Services';
+// import AdminRoute from './Pages/Login/AdminRoute/AdminRoute';
 import Login from './Pages/Login/Login/Login'
 import Register from './Pages/Login/Register/Register'
 import NotFound from './Pages/NotFound/NotFound';
